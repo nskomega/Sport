@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct AnalysisScreen: View {
+
+    @State
+    private var showsModalViewController = false
+
     var body: some View {
-        Text("AnalysisScreen")
+
+        NavigationView {
+            VStack {
+                Button(action: {
+                    self.showsModalViewController = true
+                }) {
+                    Text("Модальное окно")
+                }
+            }
+        }.sheet(isPresented: $showsModalViewController) {
+            FootballScreen()
+        }
     }
 }
 

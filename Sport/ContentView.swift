@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var isShowingDetails = false
+
     var body: some View {
 
         TabView() {
@@ -16,7 +19,7 @@ struct ContentView: View {
                     Label("Statistics", systemImage: "logo.playstation")
                 }
                 .tag(0)
-            PlayersScreen()
+            ToursScreen()
                 .tabItem {
                     Label("Players", systemImage: "person")
                 }

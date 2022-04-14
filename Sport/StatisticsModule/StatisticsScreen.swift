@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct StatisticsScreen: View {
+
+    @StateObject
+    var viewModel: StatisticsViewModel = StatisticsViewModel.init(networking: Networking.init())
+
     var body: some View {
-        Text("StatisticsScreen")
+
+        Group {
+            List(viewModel.tennis) { rank in
+                HStack {
+                    Text("\(rank.ranking)")
+                    Spacer()
+                    Text(rank.firstName)
+                    Text(rank.lastName)
+                    Spacer()
+                    Text("\(rank.rankingPoints)")
+                }
+            }
+
+        }.onAppear {
+                viewModel.getTennis()
+            }
     }
 }
 
