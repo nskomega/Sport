@@ -11,7 +11,34 @@
 		A2F7120E2807AD660040371A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7120D2807AD660040371A /* ContentView.swift */; };
 		A2F712102807AD680040371A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F7120F2807AD680040371A /* Assets.xcassets */; };
 		A2F712132807AD680040371A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F712122807AD680040371A /* Preview Assets.xcassets */; };
+		A2F712212807B26C0040371A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F712202807B26C0040371A /* NotificationService.swift */; };
+		A2F712252807B26C0040371A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2F7121E2807B26C0040371A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A2F7122C2807B32B0040371A /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = A2F7122B2807B32B0040371A /* OneSignal */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2F712232807B26C0040371A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2F712002807AD650040371A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2F7121D2807B26C0040371A;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2F712292807B26C0040371A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A2F712252807B26C0040371A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A2F712082807AD660040371A /* Sport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +46,23 @@
 		A2F7120D2807AD660040371A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2F7120F2807AD680040371A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F712122807AD680040371A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2F712192807B1E10040371A /* Sport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sport.entitlements; sourceTree = "<group>"; };
+		A2F7121E2807B26C0040371A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F712202807B26C0040371A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A2F712222807B26C0040371A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2F7122D2807B4200040371A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A2F712052807AD660040371A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F7122C2807B32B0040371A /* OneSignal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F7121B2807B26C0040371A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F7120A2807AD660040371A /* Sport */,
+				A2F7121F2807B26C0040371A /* OneSignalNotificationServiceExtension */,
 				A2F712092807AD660040371A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F712082807AD660040371A /* Sport.app */,
+				A2F7121E2807B26C0040371A /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +93,8 @@
 		A2F7120A2807AD660040371A /* Sport */ = {
 			isa = PBXGroup;
 			children = (
+				A2F7122D2807B4200040371A /* Info.plist */,
+				A2F712192807B1E10040371A /* Sport.entitlements */,
 				A2F7120B2807AD660040371A /* SportApp.swift */,
 				A2F7120D2807AD660040371A /* ContentView.swift */,
 				A2F7120F2807AD680040371A /* Assets.xcassets */,
@@ -67,6 +111,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A2F7121F2807B26C0040371A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A2F712202807B26C0040371A /* NotificationService.swift */,
+				A2F712222807B26C0040371A /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +130,37 @@
 				A2F712042807AD660040371A /* Sources */,
 				A2F712052807AD660040371A /* Frameworks */,
 				A2F712062807AD660040371A /* Resources */,
+				A2F712292807B26C0040371A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2F712242807B26C0040371A /* PBXTargetDependency */,
+			);
+			name = Sport;
+			packageProductDependencies = (
+				A2F7122B2807B32B0040371A /* OneSignal */,
+			);
+			productName = Sport;
+			productReference = A2F712082807AD660040371A /* Sport.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2F7121D2807B26C0040371A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2F712262807B26C0040371A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				A2F7121A2807B26C0040371A /* Sources */,
+				A2F7121B2807B26C0040371A /* Frameworks */,
+				A2F7121C2807B26C0040371A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Sport;
-			productName = Sport;
-			productReference = A2F712082807AD660040371A /* Sport.app */;
-			productType = "com.apple.product-type.application";
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = A2F7121E2807B26C0040371A /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +175,9 @@
 					A2F712072807AD660040371A = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					A2F7121D2807B26C0040371A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = A2F712032807AD650040371A /* Build configuration list for PBXProject "Sport" */;
@@ -111,11 +189,15 @@
 				Base,
 			);
 			mainGroup = A2F711FF2807AD650040371A;
+			packageReferences = (
+				A2F7122A2807B32B0040371A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			productRefGroup = A2F712092807AD660040371A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A2F712072807AD660040371A /* Sport */,
+				A2F7121D2807B26C0040371A /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +209,13 @@
 			files = (
 				A2F712132807AD680040371A /* Preview Assets.xcassets in Resources */,
 				A2F712102807AD680040371A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F7121C2807B26C0040371A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +231,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2F7121A2807B26C0040371A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F712212807B26C0040371A /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2F712242807B26C0040371A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2F7121D2807B26C0040371A /* OneSignalNotificationServiceExtension */;
+			targetProxy = A2F712232807B26C0040371A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A2F712142807AD680040371A /* Debug */ = {
@@ -264,17 +369,21 @@
 		A2F712172807AD680040371A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sport/Sport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sport/Preview Content\"";
-				DEVELOPMENT_TEAM = FKJRTB74YX;
+				DEVELOPMENT_TEAM = DTG667A22X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sport/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,17 +402,21 @@
 		A2F712182807AD680040371A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sport/Sport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sport/Preview Content\"";
-				DEVELOPMENT_TEAM = FKJRTB74YX;
+				DEVELOPMENT_TEAM = DTG667A22X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sport/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +426,56 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.mikhildanilov.Sport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2F712272807B26C0040371A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DTG667A22X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikhildanilov.Sport.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2F712282807B26C0040371A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DTG667A22X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikhildanilov.Sport.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,7 +503,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A2F712262807B26C0040371A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F712272807B26C0040371A /* Debug */,
+				A2F712282807B26C0040371A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2F7122A2807B32B0040371A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2F7122B2807B32B0040371A /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2F7122A2807B32B0040371A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2F712002807AD650040371A /* Project object */;
 }
