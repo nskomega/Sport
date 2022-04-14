@@ -9,7 +9,10 @@ import SwiftUI
 
 struct WebViewScreen: View {
     var body: some View {
-        Text("WebViewScreen")
+        NavigationView {
+            WebView(url: URL(string: "https://www.flashscore.ru.com/tennis/"))
+            .navigationTitle("FlashScore Tennis")
+        }
     }
 }
 
